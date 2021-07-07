@@ -16,6 +16,16 @@
 
 - linear regression 적용해서 NA imputation
 
+### 5) result0708.csv
+
+- 상가, 아파트 주소 특정된 결과
+
+### 6) train0708.csv
+
+- 아파트 임대료, 임대보증금 na imputation 완료
+- 상가 지하 임대료, 임대보증금 na 채워 넣어야 한다
+- 단지명 정보도 포함
+
 
 
 ## 2. DataMerge.ipynb
