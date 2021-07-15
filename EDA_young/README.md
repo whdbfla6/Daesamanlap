@@ -7,13 +7,13 @@
 - 지역은 get dummy(drop first)
 - 대형전용면적 단지코드별로 sum
 
-새로운 아이디어: 영구임대에 임대료, 임대보증금에 *2
+#새로운 아이디어: 영구임대에 임대료, 임대보증금에 *2 / 기각됨
 
-<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122325129.png" alt="image-20210715122325129" style="zoom:50%;" />  
+<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122325129.png" alt="image-20210715122325129"  />   
 
 - 단지내주차면수 <=785의 캣부 결과
 
-<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122450099.png" alt="image-20210715122450099" style="zoom:50%;" /> 
+<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122450099.png" alt="image-20210715122450099"  />  
 
 - 단지내주차면수 > 785의 캣부 결과
 
