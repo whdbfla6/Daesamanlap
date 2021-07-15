@@ -9,3 +9,20 @@
 
 새로운 아이디어: 영구임대에 임대료, 임대보증금에 *2
 
+<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122325129.png" alt="image-20210715122325129" style="zoom:50%;" />  
+
+- 단지내주차면수 <=785의 캣부 결과
+
+<img src="C:\Users\dbdms\AppData\Roaming\Typora\typora-user-images\image-20210715122450099.png" alt="image-20210715122450099" style="zoom:50%;" /> 
+
+- 단지내주차면수 > 785의 캣부 결과
+
+전체 돌렸을때 캣부 114.7
+
+0715 추가: 
+
+- subway dist 역수 취하고 median 아래(원래 큰 애들) 0으로 만듦. (subway_reverse) 그러나 높아져서 보류
+- 상가 빼고 임대료 임대보증금 전용면적 전용면적별 세대수 mean std 넣으니까 결과 좋아짐 (cb 112) / data1은 cb 95, data2는 cb 276. 
+
+- 0715 cb 파일이 하나로 예측해서 위의 내용 반영한 것. 
+
