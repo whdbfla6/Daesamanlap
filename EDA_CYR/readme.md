@@ -13,7 +13,7 @@
 
 
 
-### modeling 2 : 119/56
+### modeling 2 : 119/56/113(제출)
 
 1. 상가 임대료/임대보증금: quantile
 
@@ -22,7 +22,7 @@
 1. 상가 임대료/임대보증금: quantile
 2. 공급유형: 공급유형 클러스터링 후에 평균 임대료 포함
 
-### modeling 4 : 115/59
+### modeling 4 : 115/59/116(제출)
 
 1. store 임대료: mean std count(범위 클러스터)
 2. 공급유형: 평균 임대보증금/ 평균 임대료 
@@ -38,11 +38,11 @@
 1. modeling 4 유지
 2. 단지내주차면수 포함 + 관련 파생변수 제거 
 
-### modeling 6(파라미터 튜닝) - parameter tuning : 111/58
+### modeling 6(파라미터 튜닝) - parameter tuning : 111/58/118
 
 ```{'max_depth': 4, 'n_estimators': 400}```
 
 - 의미있는 변수: 세대당 가능주차면수/인구 파생변수/ 공급유형: 평균 임대보증금/ 평균 임대료 추가
-
 - cat_features사용할 경우 오히려 성능이 떨어짐
 - 제출한 것과 train/test split에서 계산한 mae가 유사한 값을 가짐
+- 단지내주차면수를 포함하는 경우 파라미터 튜닝을 하면 overfitting하는 경향이 있음 $\rightarrow$ 제거
