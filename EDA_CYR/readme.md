@@ -38,7 +38,7 @@
 1. modeling 4 유지
 2. 단지내주차면수 포함 + 관련 파생변수 제거 
 
-### modeling 6(파라미터 튜닝) - parameter tuning : 11/58
+### modeling 6(파라미터 튜닝) - parameter tuning : 111/58
 
 ```{'max_depth': 4, 'n_estimators': 400}```
 
