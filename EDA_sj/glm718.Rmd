@@ -1,0 +1,142 @@
+---
+title: "dacon0718"
+author: "sj"
+date: "7/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+X_test1 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/X_test1.csv")
+X_train1 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/X_train1.csv")
+X_test2 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/X_test2.csv")
+X_train2 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/X_train2.csv")
+y_test1 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/y_test1.csv")
+y_train1 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/y_train1.csv")
+y_test2 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/y_test2.csv")
+y_train2 = read.csv("/Users/seungji/Desktop/Dacon/dataforR/y_train2.csv")
+```
+```{r}
+test = read.csv("/Users/seungji/Desktop/Dacon/dataforR/test.csv")
+```
+```{r}
+X_train1["등록차량수"] = y_train1
+X_train2["등록차량수"] = y_train2
+```
+
+```{r}
+tst1 = test[test$세대당_가능주차면수<0.83,]
+tst2 = test[test$세대당_가능주차면수>=0.83,]
+```
+
+```{r}
+library(gee)
+model = glm(등록차량수~.,family = poisson,data = X_train1)
+summary(model)
+model2 = update(model, .~. -X70세이상.인구수-X20.39.인구수-store임대료min-store임대료50.-type_13)
+summary(model2)
+anova(model,model2, test="Chisq")
+#gee(y_train1~X_train1)
+```
+
+```{r}
+y_test1_pred = exp(predict(model2, X_test1))
+plot(y_test1$등록차량수,y_test1_pred)
+abline(a = 0, b=1)
+```
+```{r}
+library(Metrics)
+mae(y_test1$등록차량수,y_test1_pred)
+```
+```{r}
+tst1_pred = exp(predict(model2,tst1))
+```
+
+
+```{r}
+library(gee)
+model3 = glm(등록차량수~.,family = poisson,data = X_train2)
+summary(model3)
+model4 = update(model3, .~. -sub_0-sub_1-sub_dist_0-apt임대보증금max)
+summary(model4)
+anova(model3,model4, test="Chisq")
+#gee(y_train1~X_train1)
+```
+
+```{r}
+hist(y_test2$등록차량수,breaks =  50)
+```
+
+```{r}
+step(model4,direction = c("both"))
+```
+
+```{r}
+y_test2_pred = exp(predict(model4, X_test2))
+plot(y_test2$등록차량수,y_test2_pred)
+abline(a = 0, b=1)
+```
+```{r}
+library(Metrics)
+mae(y_test2$등록차량수,y_test2_pred)
+```
+
+```{r}
+hist(y_test2$등록차량수,breaks =  50)
+```
+```{r}
+X_train3  = X_train2[X_train2$등록차량수<1800,]
+```
+
+```{r}
+
+model5 = glm(등록차량수~.,family = poisson,data = X_train3)
+summary(model5)
+model6 = update(model5, .~. -지하철역-sub_0-sub_1-sub_dist_0-type_11-type_12-apt임대보증금50.-apt임대보증금max,)
+summary(model6)
+anova(model5,model6, test="Chisq")
+```
+
+```{r}
+y_test3_pred = exp(predict(model6, X_test2))
+plot(y_test2$등록차량수,y_test3_pred)
+abline(a = 0, b=1)
+```
+```{r}
+step(model6,direction = c("both"))
+```
+
+
+
+
+```{r}
+library(Metrics)
+mae(y_test2$등록차량수,y_test3_pred)
+```
+
+```{r}
+tst2_pred = exp(predict(model4,tst2))
+tst2_pred
+```
+```{r}
+tst_pred = c(tst1_pred,tst2_pred)
+tst_pred = data.frame(tst_pred)
+write.csv(tst_pred,"/Users/seungji/Desktop/Dacon/dataforR/tst_pred.csv",row.names = FALSE)
+```
+
+
+
+
+```{r}
+#X_train1["id"] = 1:nrow(X_train1)
+gee(등록차량수 ~  총인구수+세대당_인구+공가수_비율+세대당_가능주차면수, id = id, family = poisson,corstr = "exchangeable" ,data = X_train1)
+```
+
+```{r}
+X_train1["id"] = 1:nrow(X_train1)
+gee(등록차량수 ~ - type_13 -store임대료min-store임대료50. , id = id, family = poisson,corstr = "exchangeable" ,data = X_train1)
+```
+
