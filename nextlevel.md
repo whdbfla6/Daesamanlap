@@ -16,3 +16,5 @@ next level
 - 대안1. lasso + catboost 잘 합쳐보기 
 - 대안2. 위 그룹만 전체 데이터 fitting해서 predict
 - 대안3. 전체 데이터가 아닌 총세대수와 등록차량수의 차이가 큰 데이터를 아래 데이터에서 가져오기. 
+- **대안4. 단지내주차면수가 median은 넘으면서 총세대수와 등록차량수 차이가 큰 데이터를 train_down에서 가져와서 fittin 시켜 train_up 예측**
+- 
