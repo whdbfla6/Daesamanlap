@@ -15,7 +15,7 @@
 - 법정동별 연령별 인구수 및 세대수 (출처: [통계청](https://kostat.go.kr/portal/korea/index.action))
 - 법정동행정동코드 매핑 데이터 (출처: [행정안전부](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do;jsessionid=+ZUzK-vRbyaKqumcJq8NrYJf.node50?bbsId=BBSMSTR_000000000052&nttId=85215) )
 
-#### 4. 지하철 변수 가져오기 
+#### 4. 지하철 변수
 1) [trans_address_tr.txt](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/trans_address_tr.txt), [trans_address_tst.txt](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/trans_address_tst.txt)
 - 아파트 위도, 경도 정보 카카오 api 크롤링 
 
