@@ -1,21 +1,21 @@
 ## ProcessedData: 모델링 전 대회에서 제공한 데이터와 외부데이터를 합치는 과정
-####1. NA 채운 기본 파일
+#### 1. NA 채운 기본 파일
 [train_processed.csv](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/subway.csv), [test_processed.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/test_processed.csv)
 - `임대료`, `임대보증금` 등 NA 채운값 
 - NA 처리 과정은 [ProcessedData/External](https://github.com/whdbfla6/Daesamanlap/blob/cbfeadb34308bff2368bdd431a40d30ce2ac2a3c/ProcessedData/External/readme.md) 폴더 참고 
 
-####2. 연면적
+#### 2. 연면적
  [building_tr.csv](https://github.com/whdbfla6/Daesamanlap/blob/d6e96a0d8c1fe49c5fff5e91823ff53fe3438f36/ProcessedData/building_tr.csv), [building_tst.csv](https://github.com/whdbfla6/Daesamanlap/blob/d6e96a0d8c1fe49c5fff5e91823ff53fe3438f36/ProcessedData/building_tst.csv)
 - 건축연면적 크롤링 데이터 (도로명주소, 지번주소, 위도, 경도, 건축물대장 확인 가능)
 - 법정동별 인구정보를 가져오는데 필요한 도로명주소 사용
 - 최종 데이터에서는 연면적 데이터만 사용 (후에 잘못된 연면적이 있는 것으로 판단되어 KNN을 이용해 일부 값 수정)
 
-####3. 인구수
+#### 3. 인구수
 [pop_tr.csv](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/pop_tr.csv), [pop_tst.csv](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/pop_tst.csv)
 - 법정동별 연령별 인구수 및 세대수 (출처: [통계청](https://kostat.go.kr/portal/korea/index.action))
 - 법정동행정동코드 매핑 데이터 (출처: [행정안전부](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do;jsessionid=+ZUzK-vRbyaKqumcJq8NrYJf.node50?bbsId=BBSMSTR_000000000052&nttId=85215) )
 
-####4. 지하철 변수 가져오기 
+#### 4. 지하철 변수 가져오기 
 1) [trans_address_tr.txt](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/trans_address_tr.txt), [trans_address_tst.txt](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/trans_address_tst.txt)
 - 아파트 위도, 경도 정보 카카오 api 크롤링 
 
@@ -27,7 +27,7 @@
 -  지하철 위도, 경도 정보 카카오 api 크롤링 
 -  [SubwayLocation.ipynb](https://github.com/whdbfla6/Daesamanlap/blob/e1770f576f57529d33c6706c9070cbf47c94f7a8/External3/SubwayLocation.ipynb)
 
-####5. 최종 merge 데이터
+#### 5. 최종 merge 데이터
 [merged_train.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/merged_train.csv), [merged_test.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/merged_test.csv)
 
 
