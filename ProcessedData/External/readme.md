@@ -3,6 +3,7 @@
 ### 1) external_data.csv
 
 - 아파트 정보 포함
+- 공공데이터포털 [한국토지주택공사_임대주택단지 조회 서비스](https://www.data.go.kr/data/15059475/openapi.do) 
 
 ### 2) result.csv
 
