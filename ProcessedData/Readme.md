@@ -19,3 +19,6 @@
 
 
 7. [merged_train.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/merged_train.csv), [merged_test.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/merged_test.csv)
+
+
+## 총 데이터 merge 과정: [DataMerge.ipynb](https://github.com/whdbfla6/Daesamanlap/blob/e40a664000410e00550f1ee5dbb9b55080b6deec/ProcessedData/External/DataMerge.ipynb)
