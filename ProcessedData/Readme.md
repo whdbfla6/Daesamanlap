@@ -1,6 +1,7 @@
 ## ProcessedData: 모델링 전 대회에서 제공한 데이터와 외부데이터를 합치는 과정
 1. [train_processed.csv](https://github.com/whdbfla6/Daesamanlap/blob/a25c6ba78220d67d33e76ae26a34ece1619ad4cd/ProcessedData/subway.csv), [test_processed.csv](https://github.com/whdbfla6/Daesamanlap/blob/fe93fc199b1d9564f0db5b962805a2e4eb117fb5/ProcessedData/test_processed.csv)
-- `임대료`, `임대보증금`: NA 채운값 
+- `임대료`, `임대보증금` 등 NA 채운값 
+- NA 처리 과정은 [ProcessedData/External](https://github.com/whdbfla6/Daesamanlap/blob/cbfeadb34308bff2368bdd431a40d30ce2ac2a3c/ProcessedData/External/readme.md) 폴더 참고 
 
 2. [building_tr.csv](https://github.com/whdbfla6/Daesamanlap/blob/d6e96a0d8c1fe49c5fff5e91823ff53fe3438f36/ProcessedData/building_tr.csv), [building_tst.csv](https://github.com/whdbfla6/Daesamanlap/blob/d6e96a0d8c1fe49c5fff5e91823ff53fe3438f36/ProcessedData/building_tst.csv)
 
