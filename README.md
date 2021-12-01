@@ -9,23 +9,17 @@
 > 주최, 주관
 
 - 주최 : 한국토지주택공사
-
 - 주관 : 데이콘
 
-  
 
 
-> 제공받은 데이터
+> 디렉토리 구성
 
-- data/train.csv
-- data/test.csv
-- data/age_gender_info.csv
-
-
-
-> 최총코드
-
-- [Final.ipynb](https://github.com/whdbfla6/Daesamanlap/blob/main/Final.ipynb)
-
-- Private score : 110
-
+.
+├── Final.ipynb.  								  $$\rightarrow$$ 최종 분석 파일
+├── README.md
+├── data												 $\rightarrow$ raw data
+    ├── age_gender_info.csv
+    ├── sample_submission.csv
+    ├── test.csv
+    └── train.csv
