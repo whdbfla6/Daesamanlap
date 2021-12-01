@@ -15,11 +15,15 @@
 
 > 디렉토리 구성
 
-.
-├── Final.ipynb.  								  $$\rightarrow$$ 최종 분석 파일
+```md
+Daesamanlap
+├── Final.ipynb  --> 최종분석파일(private:110)
 ├── README.md
-├── data												 $\rightarrow$ raw data
+└── data --> raw data
     ├── age_gender_info.csv
     ├── sample_submission.csv
     ├── test.csv
     └── train.csv
+```
+
+
